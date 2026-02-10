@@ -32,9 +32,13 @@ app.use(express.static(path.join(__dirname)));
 
 
 // Routes
+// app.get('/', (req, res) => {
+//     // res.sendFile(path.join(__dirname, 'index.html'));
+// });
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+  res.json({ message: 'Pantry Genius API is running' });
 });
+
 
 app.get('/api/recipes', async (req, res) => {
     try {
