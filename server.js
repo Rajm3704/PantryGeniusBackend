@@ -8,7 +8,7 @@ const app = express();
 const PORT = process.env.PORT || 3600;
 
 // --- MongoDB Connection ---
-const MONGO_URI = 'mongodb://127.0.0.1:27017/pantryGeniusDB';
+// const MONGO_URI = 'mongodb://127.0.0.1:27017/pantryGeniusDB';
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('Successfully connected to MongoDB'))
@@ -28,7 +28,7 @@ const Recipe = mongoose.model('Recipe', recipeSchema);
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname)));
+// app.use(express.static(path.join(__dirname)));
 
 
 // Routes
