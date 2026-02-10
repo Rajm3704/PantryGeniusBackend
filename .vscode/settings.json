@@ -1,0 +1,8 @@
+{
+    "chat.agent.codeBlockProgress": false,
+    "chat.agent.enabled": false,
+    "chat.agent.thinking.generateTitles": false,
+    "chat.agent.thinking.terminalTools": false,
+    "chat.agentsControl.enabled": false,
+    "chat.checkpoints.enabled": false
+}
