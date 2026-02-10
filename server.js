@@ -8,10 +8,9 @@ const PORT = process.env.PORT || 3600;
 // --- MongoDB Connection ---
 const MONGO_URI = 'mongodb://127.0.0.1:27017/pantryGeniusDB';
 
-mongoose.connect(MONGO_URI)
-    .then(() => console.log('Successfully connected to MongoDB.'))
-    .catch(err => console.error('Connection error', err));
-
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log('Successfully connected to MongoDB'))
+  .catch(err => console.error('Connection error:', err));
 // --- Mongoose Schema and Model ---
 const recipeSchema = new mongoose.Schema({
     name: { type: String, required: true },
