@@ -45,6 +45,7 @@ app.get('/api/recipes', async (req, res) => {
         const recipes = await Recipe.find();
         res.json(recipes);
     } catch (error) {
+      console.error("REAL ERROR:", error);
         res.status(500).json({ message: "Error fetching recipes", error: error });
     }
 });
